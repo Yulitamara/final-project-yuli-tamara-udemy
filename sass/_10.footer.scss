@@ -1,0 +1,54 @@
+.footer {
+  grid-column: container-start / container-end;
+  background-color: #f0f8ff;
+  color: var(--color-primary);
+
+  padding: 4vh 4vw;
+
+  &__content {
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+
+    &--copyright {
+      p {
+        font-size: calc(0.7rem + 0.5vw);
+        font-weight: font-weight(font-weight-regular);
+        letter-spacing: 0.2rem;
+        a {
+          font-size: calc(0.7rem + 0.5vw);
+          font-family: "Gloria Hallelujah", cursive;
+          color: var(--color-primary);
+        }
+      }
+    }
+
+    &--social {
+      &__icon-link {
+        i,
+        i:visited {
+          font-size: calc(1.4rem + 0.5vw);
+          padding: 0 1rem;
+          color: var(--color-primary);
+          transition: all 0.3s ease-in-out;
+        }
+
+        i:hover,
+        i:active {
+          color: rgb(228, 228, 228);
+        }
+      }
+    }
+  }
+
+  @include media-medium {
+    &__content {
+      &--copyright {
+        p {
+          font-size: calc(1rem + 0.5vw);
+        }
+      }
+    }
+  }
+}

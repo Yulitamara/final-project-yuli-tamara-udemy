@@ -1,0 +1,22 @@
+// .gallery {
+//   grid-column: center-start / center-end;
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+
+//   grid-gap: 2rem;
+
+//   &__content {
+//     display: grid;
+//     grid-gap: 2vw;
+//     padding: 2rem 4rem;
+//     height: 32rem;
+//     align-items: center;
+//   }
+
+//   @for $img from 1 through 10 {
+//     .gallery__content:nth-child(#{$img}) {
+//       background-image: url("/up/img/gallery/gallery-#{$img}.png");
+//       @extend %bg;
+//     }
+//   }
+// }

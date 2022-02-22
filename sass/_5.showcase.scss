@@ -1,0 +1,67 @@
+.showcase {
+  grid-column: container-start / container-end;
+  background-color: aliceblue;
+  // @extend %sec-padding;
+
+  &__content {
+    &--img {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        width: 40%;
+        height: 100%;
+        padding-top: 5rem;
+      }
+    }
+  }
+  //*-*-*-*-*-*-*-*-*-*-- The 800px Mark Break Point*-*-*-*-*-*-*-*-*-*-*
+  @include media-tablet {
+    &__content {
+      &--img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+          // border: groove 1em red;
+          width: 60%;
+          min-width: 35%;
+          height: 100%;
+          padding-top: 5rem;
+        }
+      }
+    }
+  }
+  //*-*-*-*-*-*-*-*-*-*-- The 600px Mark Break Point*-*-*-*-*-*-*-*-*-*-*
+  @include media-medium {
+    &__content {
+      &--img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+          width: 75%;
+          min-width: 35%;
+          height: 100%;
+          padding-top: 5rem;
+        }
+      }
+    }
+  }
+  //*-*-*-*-*-*-*-*-*-*-- The 400px Mark Break Point*-*-*-*-*-*-*-*-*-*-*
+  @include media-small {
+    &__content {
+      &--img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+          width: 90%;
+          min-width: 35%;
+          height: 100%;
+          padding-top: 5rem;
+        }
+      }
+    }
+  }
+}

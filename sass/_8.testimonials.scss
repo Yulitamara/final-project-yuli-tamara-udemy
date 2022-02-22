@@ -1,0 +1,99 @@
+.testimonials {
+  grid-column: container-start / container-end;
+
+  background-color: var(--color-secondary);
+
+  &__content {
+    max-width: 100rem;
+    margin: 4vh auto 0;
+
+    &--slider {
+      border: 0.1rem solid var(--color-quinary);
+      max-width: 60rem;
+      margin: 0 auto;
+      text-align: center;
+      padding: 2vh 1vw;
+
+      &__slide {
+        display: none;
+
+        &--para {
+          @extend %sec-para;
+          margin-bottom: 3rem;
+
+          a,
+          a:active {
+            color: black;
+            text-decoration: underline;
+          }
+
+          img {
+            width: 45%;
+          }
+        }
+
+        &--title {
+          cursor: pointer;
+          @extend %sec-h3;
+          color: #ff7465;
+        }
+      }
+
+      &__slide.active {
+        display: block;
+        animation: slide 1s linear;
+      }
+    }
+
+    &--indicator {
+      padding-top: 4vh;
+      padding-bottom: 4vh;
+      display: flex;
+      justify-content: center;
+
+      &__img {
+        height: calc(9rem + 8vw);
+        width: calc(9rem + 8vw);
+        object-fit: cover;
+        // border-radius: 50%;
+        margin: 2vh 2vw;
+        opacity: 0.2;
+        // border: 0.2rem solid var(--color-quinary);
+        cursor: pointer;
+        transition: opacity 1s ease;
+      }
+
+      &__img.active {
+        opacity: 1;
+      }
+    }
+  }
+
+  //*-*-*-*-*-*-*-*-*-*-- The 600px Mark Break Point *-*-*-*-*-*-*-*-*-*-*
+  @include media-medium {
+    &__content {
+      max-width: 30rem;
+      &--slider {
+        &__slide {
+          &--para {
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(-2rem);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
