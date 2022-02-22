@@ -47,7 +47,10 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: [container-start] 1fr [center-start] repeat(6, [col-start] minmax(min-content, 16.66667rem) [col-end]) [center-end] 1fr [container-end];
+  grid-template-columns: [container-start] 1fr [center-start] repeat(
+      6,
+      [col-start] minmax(min-content, 16.66667rem) [col-end]
+    ) [center-end] 1fr [container-end];
   grid-template-rows: min-content 100vh repeat(9, min-content);
 }
 
@@ -244,7 +247,8 @@ i {
     transition: transform 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     padding-top: 5rem;
   }
-  .header__nav--logo:link, .header__nav--logo:visited {
+  .header__nav--logo:link,
+  .header__nav--logo:visited {
     font-size: calc(1.5rem + 1vw);
   }
   .header__nav--img {
@@ -299,7 +303,9 @@ i {
     z-index: 20;
     cursor: pointer;
   }
-  .header__menu--line, .header__menu--line::before, .header__menu--line::after {
+  .header__menu--line,
+  .header__menu--line::before,
+  .header__menu--line::after {
     content: "";
     position: absolute;
     width: 3.5rem;
@@ -426,7 +432,8 @@ i {
   overflow: hidden;
 }
 
-.products__content--card__name, .products__content--card__view {
+.products__content--card__name,
+.products__content--card__view {
   position: absolute;
   bottom: 20%;
   left: 5%;
@@ -745,7 +752,7 @@ i {
 
 .footer__content--social__icon-link i:hover,
 .footer__content--social__icon-link i:active {
-  color: #e4e4e4;
+  color: #c94e57;
 }
 
 @media screen and (max-width: 600px) {
@@ -754,7 +761,8 @@ i {
   }
 }
 
-.products, .register {
+.products,
+.register {
   padding: 6vh 6vw;
 }
 
@@ -765,7 +773,8 @@ i {
   letter-spacing: 0.2rem;
 }
 
-.products__content--card__view, .testimonials__content--slider__slide--title {
+.products__content--card__view,
+.testimonials__content--slider__slide--title {
   font-size: calc(1.2rem + 0.5vw);
 }
 
