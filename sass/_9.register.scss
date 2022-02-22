@@ -115,7 +115,9 @@
             background-color: #d8bebe;
           }
 
-          button {
+          button,
+          button:visited {
+            color: black;
             padding: 0.8rem 1.7rem;
             width: 100%;
             height: 100%;
