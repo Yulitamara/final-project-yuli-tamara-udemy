@@ -2,9 +2,9 @@
   grid-column: container-start / container-end;
 
   background-color: var(--color-secondary);
+  @extend %sec-padding;
 
   &__content {
-    max-width: 100rem;
     margin: 4vh auto 0;
 
     &--slider {
@@ -80,6 +80,26 @@
               width: 100%;
             }
           }
+        }
+      }
+    }
+  }
+
+  //*-*-*-*-*-*-*-*-*-*-- The 400px Mark Break Point *-*-*-*-*-*-*-*-*-*-*
+  @include media-small {
+    &__content {
+      &--indicator {
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+        display: flex;
+        justify-content: center;
+
+        &__img {
+          height: calc(7rem + 8vw);
+          width: calc(7rem + 8vw);
+          object-fit: cover;
+          margin: 1vh 1vw;
+          opacity: 0.2;
         }
       }
     }
