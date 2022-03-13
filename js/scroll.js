@@ -14,3 +14,4 @@ function scrollToTop() {
 scroll.addEventListener('click', () => {
   scrollToTop();
 });
+

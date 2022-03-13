@@ -1,17 +1,19 @@
 .showcase {
   grid-column: container-start / container-end;
   background-color: aliceblue;
-  // @extend %sec-padding;
+  @extend %sec-padding;
 
   &__content {
+    margin: 10vh auto 0;
+    @extend %sec-padding;
+
     &--img {
       display: flex;
       flex-direction: column;
       align-items: center;
       img {
-        width: 40%;
+        width: 45%;
         height: 100%;
-        padding-top: 5rem;
       }
     }
   }
